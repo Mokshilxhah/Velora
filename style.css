@@ -1,0 +1,474 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:sans-serif;
+    box-sizing: border-box;
+}
+
+.common{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+body.landing-page {
+    background-image: url("images/FF.png");
+    background-size: cover;          
+    background-position: center;    
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+    min-height: 98vh;           
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.other-page{
+    background-image: url("images/11.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.promotion{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 50px;
+    margin: 8px 60px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.promotion p{
+    font-size: 14px;
+    font-family:sans-serif;
+}
+
+.navbar{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.container{
+    height: 45px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.container1{
+    height: 50px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+
+    margin-left: 4%;
+    margin-right: 15%;
+}
+
+.container2{
+    height: 50px;
+    width: 60px;
+    border-radius: 15px;
+    background-color: white;
+    color: black; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.container1 a{
+    text-decoration: none;
+    color: white; 
+    font-size: 25px;
+    font-weight: bold; 
+}
+
+.container2 a{
+    text-decoration: none;
+    color: black; 
+    font-size: 25px;
+    font-weight: bold; 
+}
+
+#span{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.But{
+    margin-top: 180px;
+}
+
+button{
+    height: 70px;
+    width: 250px;
+    border-radius: 10px;
+    font-size: 30px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    margin-top: 90%; 
+    border: 0;
+}
+
+button:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: black;
+}
+
+.But a{
+    text-decoration: none;
+}
+
+/* ======================================= Main Class ================================= */
+
+  .Bestsellar{
+    height: 300px;
+    background-color: #F2CEC7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .image1 {
+    width: 100%;
+    height: 70%;
+    
+    object-fit: cover;
+    border-radius: 25px;    
+    margin: 15px auto;   
+    display: block;
+  }
+
+  .p-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+
+  .sellar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 50px;
+    background-color: black;
+    color: white;
+    margin-top: 17%;
+  }
+
+  .sellar a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .B_Box{
+    height: 300px;
+    width: 200px;
+    border-radius: 0px;
+    padding: 10px;
+  }
+
+  .box-class {
+      padding: 10px 20px;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 0%;
+      margin-bottom: 5%;
+    }
+  
+  .box{
+    background-color: rgb(224, 224, 224);
+    height: 420px;
+    width: 250px;
+    border-radius: 0px;
+    margin-top: 40px;
+    padding: 0px;
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px;
+
+    position: relative;
+    overflow: hidden; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease;         
+  }
+
+  .box::before {
+    content: "";
+    width: 100%;
+    height: 70%;    
+    display: block;
+  }
+
+  .image:hover {
+    transform: scale(1.3);
+    transform-origin: center;
+  } 
+
+  .badge {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+
+    background: red;
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+
+    font-weight: bold;
+    z-index: 10;
+    pointer-events: none;
+  }
+  
+  .image {
+    position: absolute;
+
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 0px; 
+    border-bottom-right-radius: 0px;     
+    margin: 0 auto;   
+    transition: transform .2s ease;
+  }
+
+  .product-info {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .product-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    padding: 0px 0px 0px 20px;
+  }
+  
+  .product-price {
+    font-size: 1rem;
+    color: #d43f3a; 
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: left;
+    padding: 0px 0px 0px 20px;
+  }
+
+  .cart{
+    margin-top: 15px;
+  }
+
+  .view_more{
+    height: 30px;
+    width: 100px;
+    border-radius: 25px;
+    font-size: 14px;
+    background-color: white;
+    color: white;
+  }
+
+  .view_more a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .add_to_cart{
+    height: 30px;
+    width: 100px;
+    border-radius: 25px;
+    font-size: 14px;
+    background-color: white;
+    color: white;
+  }
+
+  .add_to_cart a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .view_more:hover{
+    transform: scale(1.1);
+    background-color: #eb524d;
+    font-weight: bolder;
+  }
+
+  .add_to_cart:hover{
+    transform: scale(1);
+    background-color: #eb524d;
+    font-weight: bolder;
+  }
+  
+  .box::after {
+    content: attr(data-label);
+    font-size: 12px;
+    color: white;
+    margin-top: 5px;
+  }
+
+  /*  ============================= Footer =========================== */
+
+  footer {
+    background-color: #f5cec7;
+    color: #000;
+    font-family: Arial, sans-serif;
+    padding: 50px 50px 20px;
+    min-height: 150px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-bottom: 3px solid rgb(184, 51, 51);
+    padding-bottom: 80px;
+    margin-left: 20px;
+  }
+  
+  .footer-section {
+    flex: 2;
+    min-width: 300px;
+    margin-top: 80px;
+  }
+
+  .footer-section h1 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  
+  .footer-section h4 {
+    font-size: 1 rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 20px;
+  }
+  
+  .footer-section a {
+    text-decoration: none;
+    color: rgb(40, 39, 39);
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #f11e17;
+  }
+  
+  .footer-section p {
+    line-height: 1.6;
+    font-size: 1rem;
+    color: rgb(40, 39, 39);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+.email-box{
+  width: 700px;
+  margin: auto;
+  margin-top: 10px;                 
+  position: relative;    
+ }
+
+.email{
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  padding: 0 50px 0 20px;  
+  font-size: 18px;
+  outline: none;
+  text-align: center;
+}
+
+.send-icon{
+  position: absolute;
+  right: 30px;             
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  cursor: pointer;
+  color: black;
+}
+
+.send-icon:hover{
+  color: rgb(210, 54, 54);
+
+}
+
+
+.connect{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    height: 50px;
+    margin: 20px 250px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+}
+
+.connect p{
+    font-size: 14px;
+    font-family:sans-serif;
+}
+
