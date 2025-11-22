@@ -143,6 +143,173 @@ button:hover{
     text-decoration: none;
 }
 
+
+/* ============================== Account Section ======================================== */
+
+body.account-page{
+    background-color: #1f2029;
+    height: 100vh;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+   background-color: rgb(44, 44, 44);
+}
+
+.account{
+    height: 500px;
+    width: 420px;
+    position: relative; /* For Flip Setup */
+    margin-top: 10px;
+}
+
+.toggle{
+    position: absolute;
+    left: -9999px;
+}
+
+.toggle-button{
+    width: 160px;
+    height: 40px;
+    background-color: #ffeba7;
+    border-radius: 20px;
+
+    display: block;
+    margin: 0px auto 20px auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-button::before{
+    content: '\eb4f';
+    font-family: 'unicons';
+    position: absolute;
+    top: 50%;       
+    left: 0%;      
+    transform: translate(0, -50%); 
+    width: 55px;
+    height: 57px;
+    border-radius: 50%;
+    background-color: #102770;
+    color: #ffeba7;
+    font-size: 28px;
+    line-height: 55px;  
+    text-align: center;
+    transition: 0.4s;
+
+    transition: transform 0.5s ease-in-out; 
+    transform: translateY(-50%);
+    transform-origin: center; 
+}
+
+.toggle:checked + .toggle-button::before{
+    transform: translateX(105px) translateY(-50%) rotate(-270deg);
+}
+
+.card {
+    width: 100%;
+    height: 90%;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease-in-out; 
+}
+
+.toggle:checked ~ .card .card-inner {
+    transform: rotateY(180deg);
+}
+
+.acc-front, .acc-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(bg.svg);
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.acc-back {
+    transform: rotateY(180deg);
+}
+
+.acc-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.form-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 20px 12px 50px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #fff;
+    background-color: #1f2029;
+    box-shadow: 0 4px 8px rgba(21,21,21,0.2);
+    transition: 0.3s;
+}
+
+.input:focus {
+    box-shadow: 0 0 0 2px rgb(219, 91, 91);
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #f8e8b4;
+    font-size: 20px;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ddc884;
+    color: #102770;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2043b9;
+    color: #ffeba7;
+}
+
+.acc-content h1 {
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #ffeba7;
+}
+
 /* ======================================= Main Class ================================= */
 
   .Bestsellar{
@@ -471,4 +638,5 @@ button:hover{
     font-size: 14px;
     font-family:sans-serif;
 }
+
 
