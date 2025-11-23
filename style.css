@@ -343,6 +343,7 @@ body.account-page {
         height: 50px;
         width: 150px;
         font-size: 20px;
+        text-align:center;
     }   
 }
 
@@ -720,6 +721,7 @@ body.account-page {
     font-size: 14px;
     font-family:sans-serif;
 }
+
 
 
 
