@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Track Order | Velora</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: lightblue;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        main {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+            flex: 1;
+        }
+
+        h2 {
+            text-align: left;
+            color: #111827;
+            margin-bottom: 30px;
+            margin-top: 10px;
+        }
+
+        .radio-box {
+            display: flex;
+            flex-direction: row;
+            gap: 18px; 
+            margin-bottom: 40px;
+        }
+
+        .input-group {
+            margin-top: 20px;
+            animation: fadeIn 0.4s;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .text {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #111827;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1f2937;
+        }
+
+        footer {
+            text-align: center;
+            padding: 18px 0;
+            background: #111827;
+            color: white;
+            font-size: 14px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+<header>Velora</header>
+
+<main>
+    <h2><i class="fa-solid fa-truck"></i> Track Your Order</h2>
+    <div class="radio-box">
+        <label for="">Search By : </label>
+        <input type="radio" id="byOrder" name="track" onclick="showSection('orderSection')" checked>
+        <label for="orderId">Order ID</label><br>
+
+        <input type="radio" id="byMobile" name="track" onclick="showSection('mobileSection')">
+        <label for="Mobile">Mobile No</label>
+    </div>
+
+    <div id="orderSection" class="input-group">
+        <label>Enter Order ID</label>
+        <input type="text" class="text" placeholder="Enter Your Order ID" required>
+        <button onclick="location.href='Track_details.html'">Submit</button>
+    </div>
+
+    <div id="mobileSection" class="input-group" style="display:none">
+        <label>Enter Email Address</label>
+        <input type="email" class="text" placeholder="Enter Your Email Address" required>
+
+        <label>Enter Mobile Number</label>
+        <input type="tel" class="text" placeholder="Enter Your Mobile Number" required>
+
+        <button onclick="location.href='Track_details.html'">Submit</button>
+    </div>
+    </main>
+    <footer>© 2025 Velora. All Rights Reserved.</footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.getElementById("orderSection").style.display = "none";
+            document.getElementById("mobileSection").style.display = "none";
+
+            document.getElementById(sectionId).style.display = "block";
+        }
+    </script>
+</body>
+</html>

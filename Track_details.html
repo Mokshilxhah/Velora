@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Details | Velora</title>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; 
+        }
+
+        body {
+            background: url("images/Velora.png") no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease;
+        }
+
+        header, footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .order-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .left {
+            flex: 1.2;
+        }
+
+        .right {
+            flex: 0.8;
+        }
+
+        .label { color: gray; font-size: 16px; }
+        .day { color: #2b7cd3; margin: 5px 0; font-size: 28px; }
+        .month { font-size: 20px; }
+        .date { font-size: 70px; margin: 5px 0; }
+        .status { color: #ff8c42; font-weight: bold; font-size: 18px; margin-top: 10px; }
+
+        .courier-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            width: 90px;
+            height: 55px;
+            border: 2px solid black;
+        }
+
+        .tracking p { margin: 0; color: gray; }
+        .tracking h3 { margin: 0; }
+
+        .section-title {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .details p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .steps {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .step {
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 16px;
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .step span.icon {
+            font-size: 35px;
+            margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                background: #d7ecff;
+            }
+
+            header, footer {
+                font-size: 24px;
+                padding: 10px 0;
+            }
+
+            main {
+                padding: 10px;
+            }
+
+            .order-container {
+                flex-direction: column;
+                gap: 10px;
+                padding: 15px;
+                margin: 0;
+                width: 95%;
+            }
+
+            iframe {
+                display: none;
+            }
+
+            .day { font-size: 22px; }
+            .month { font-size: 18px; }
+            .date { font-size: 60px; }
+            .status { font-size: 16px; }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 100%;
+            }
+
+            .step span.icon {
+                font-size: 40px;
+            }
+
+            .step {
+                padding: 12px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>Velora</header>
+<main>
+    <div class="glass-box">
+        <div class="order-container">
+
+            <div class="left">
+                <p class="label"><b>Estimated Delivery Date</b></p>
+                <h2 class="day">Monday</h2>
+                <h3 class="month">March</h3>
+                <h1 class="date">26</h1>
+                <p class="status">Out For Delivery</p>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.77492574416!2d77.30126750477365!
+            3d12.954459533002522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8
+            517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1764182241325!5m2!1sen!2sin" width="350" height="250" style="border:0;margin-top: 25px;margin-right: 20px;" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="right">
+                <div class="courier-row">
+                    <img src="images/logo.png" class="logo">
+
+                    <div class="tracking">
+                        <p>Tracking ID :</p>
+                        <h3>123456789012</h3>
+                    </div>
+                </div>
+
+                <h3 class="section-title">📦 Order Details</h3>
+                <div class="details">
+                    <p><span><b>Order ID :</b></span> 1174589</p>
+                    <p><span><b>Order Placed On :</b></span> 17rd March 2024</p>
+                    <p><span><b>Name :</b></span> Taney Suneja</p>
+                    <p><span><b>Contact :</b></span> 98726 xxxxx</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="steps">
+            <div class="step"><span class="icon">📦</span>Order Received</div>
+            <div class="step"><span class="icon">🚚</span>Pickup Completed</div>
+            <div class="step"><span class="icon">📍</span>In Transit</div>
+            <div class="step"><span class="icon">🏠</span>Out for Delivery</div>
+            <div class="step"><span class="icon">✔️</span>Delivered</div>
+        </div>
+    </div>
+</main>
+
+<footer style="font-size: 15px;">© 2025 Velora. All Rights Reserved.</footer>
+
+</body>
+</html>
